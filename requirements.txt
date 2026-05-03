@@ -1,0 +1,28 @@
+# ==========================================
+# مشروع مساعد الدراسة الذكي - Smart Study Assistant
+# كلية الذكاء الاصطناعي - جامعة الدلتا
+# ==========================================
+
+# 1. متطلبات بيئة التشغيل (Environment):
+- Node.js (الإصدار 16 أو أحدث)
+- npm (مدير حزم Node)
+- حساب على MongoDB Atlas (لقاعدة البيانات السحابية)
+- Gemini API Key (من Google AI Studio)
+
+# 2. مكتبات الباك-إند (Backend Dependencies):
+- express: لإنشاء خادم الويب والـ APIs.
+- mongoose: للربط والتعامل مع قاعدة بيانات MongoDB.
+- dotenv: لإدارة مفاتيح التشغيل (API Keys) بأمان.
+- cors: للسماح بالاتصال بين الواجهة الأمامية والخلفية.
+- multer: لمعالجة ورفع ملفات الـ PDF.
+- pdf-parse: لاستخراج النصوص من ملفات الـ PDF.
+- @google/generative-ai: المكتبة الرسمية لربط المشروع بذكاء Gemini الاصطناعي.
+
+# 3. مكتبات الفرونت-إند (Frontend Dependencies):
+- react: المكتبة الأساسية لبناء الواجهة.
+- axios: لإرسال ملفات الـ PDF واستلام التلخيص من السيرفر.
+- react-router-dom: لإدارة التنقل بين صفحات الموقع.
+
+# 4. أوامر التحميل السريع (Installation Commands):
+- للباك-إند: npm install express mongoose dotenv cors multer pdf-parse @google/generative-ai
+- للفرونت-إند: npm install axios react-router-dom

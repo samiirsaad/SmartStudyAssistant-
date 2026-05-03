@@ -1,0 +1,8 @@
+id,userId,name,description,color,createdAt,completedLectures,totalQuizzes,avgScore,lastActivity,status
+1777353623846,1777353582703,NLP,,#f97316,2026-04-28T05:20:23.846Z,0,0,0,,Not Started
+1777483022876,1,ML,,#6366f1,2026-04-29T17:17:02.876Z,0,0,0,,Not Started
+1777815451520,1776852563579,ML,Machine learning,#ec4899,2026-05-03T13:37:31.520Z,0,0,0,,Not Started
+1777815468499,1776852563579,Ai,Artificial lligence,#5b21b6,2026-05-03T13:37:48.499Z,0,0,0,,Not Started
+1777815505480,1776852563579,NLP,Natural Language Processing,#f59e0b,2026-05-03T13:38:25.480Z,0,0,0,,Not Started
+1777815536449,1776852563579,HCI,Humen Computer Interactive ,#059669,2026-05-03T13:38:56.449Z,0,0,0,,Not Started
+1777815556920,1776852563579,AR,Automated Reasoning,#ec4899,2026-05-03T13:39:16.920Z,0,0,0,,Not Started

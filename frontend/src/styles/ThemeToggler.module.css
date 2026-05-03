@@ -1,0 +1,37 @@
+.themeToggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  transition: all var(--transition-normal);
+}
+
+.themeToggler:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.themeToggler:active {
+  background-color: var(--color-bg-tertiary);
+}
+
+.icon {
+  display: flex;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 480px) {
+  .themeToggler {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
