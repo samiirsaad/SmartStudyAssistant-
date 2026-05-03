@@ -1,90 +1,98 @@
-<<<<<<< HEAD
-# SmartStudyAssistant-
-=======
 # Smart Study Assistant 📚
 
-مساعد دراسة ذكي يحوّل محاضراتك إلى ملخصات واختبارات
+مساعد دراسي ذكي ومتكامل يهدف إلى تحويل أسلوب المذاكرة التقليدي إلى تجربة تفاعلية ممتعة. يقوم النظام باستقبال محاضراتك، تحليلها بالذكاء الاصطناعي، وتوليد ملخصات دقيقة واختبارات تفاعلية لضمان فهمك العميق للمواد.
 
-## المتطلبات
-- Node.js v16+
-- npm
-- MongoDB Atlas Account
-- Google Gemini API Key
+---
 
-## التثبيت
+## ✨ المميزات الرئيسية (Features)
 
-### Backend
+- **📄 تحليل المحاضرات (PDF/Text):** رفع ملفات المحاضرات واستخراج النصوص منها تلقائياً.
+- **🧠 تلخيص بالذكاء الاصطناعي:** توليد ملخصات شاملة ونقاط رئيسية باستخدام نماذج الذكاء الاصطناعي القوية (`openai/gpt-oss-20b`).
+- **📝 اختبارات تفاعلية ذكية:** تحويل محتوى المحاضرة إلى أسئلة اختيار من متعدد مع التقييم الفوري وحفظ النتائج.
+- **💬 المساعد الذكي (StudyBot):** شات بوت مدمج لشرح أي جزء غير مفهوم في المحاضرات والإجابة على أسئلتك.
+- **📊 لوحة تحكم وإحصائيات (Dashboard):** تتبع تقدمك في كل مادة، عدد المحاضرات المكتملة، ونقاطك في الاختبارات.
+- **💾 تخزين محلي سريع:** يعتمد النظام على تخزين البيانات في ملفات `CSV` بدلاً من قواعد البيانات المعقدة لسهولة وسرعة التشغيل.
+- **🎨 واجهة مستخدم عصرية:** تصميم مريح للعين يدعم الوضع الليلي (Dark Mode) ويدعم اللغة العربية بالكامل.
+
+---
+
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+
+### واجهة المستخدم (Frontend)
+- **React.js**: لبناء واجهة المستخدم التفاعلية.
+- **CSS Modules / Vanilla CSS**: لتصميم النظام بشكل عصري.
+
+### الخادم (Backend)
+- **Node.js & Express.js**: لإدارة خادم الـ API.
+- **Multer / PDF-Parse**: للتعامل مع رفع وقراءة ملفات الـ PDF.
+- **OpenRouter API**: للتواصل مع نماذج الذكاء الاصطناعي (مثل `GPT-OSS`).
+- **CSV Storage**: لتخزين البيانات محلياً بمرونة وسرعة.
+
+---
+
+## 🚀 كيفية التشغيل (Quick Start)
+
+لقد جعلنا تشغيل المشروع أسهل ما يمكن! لست بحاجة إلى تشغيل كل جزء على حدة.
+
+### الطريقة الأسهل:
+ببساطة قم بالضغط مرتين (Double Click) على ملف:
+`run_everything.bat`
+وسيقوم هذا الملف بفتح الـ Backend والـ Frontend معاً تلقائياً.
+
+### الطريقة اليدوية:
+إذا كنت تفضل تشغيل كل جزء بنفسك:
+
+**1. تشغيل الخادم (Backend)**
 ```bash
 cd backend
 npm install
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-```
-
-## تشغيل المشروع
-
-### تشغيل Backend (Terminal 1)
-```bash
-cd backend
 npm run dev
 ```
 
-### تشغيل Frontend (Terminal 2)
+**2. تشغيل واجهة المستخدم (Frontend)**
 ```bash
 cd frontend
+npm install
 npm start
 ```
-
-## المتغيرات البيئية
-
-### Backend (.env)
-```
-PORT=5000
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/dbname
-GEMINI_API_KEY=your_gemini_api_key
-```
-
-### Frontend (.env)
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
-## البنية
-
-```
-SmartStudyAssistant/
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   └── middlewares/
-│   ├── uploads/
-│   └── server.js
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── assets/
-│   │   └── utils/
-│   └── public/
-└── requirements.txt
-```
-
-## الميزات
-
-✅ تحميل ملفات PDF
-✅ استخراج النصوص من الملفات
-✅ توليد ملخصات ذكية باستخدام OpenRouter AI
-✅ إنشاء اختبارات تفاعلية
-✅ واجهة مستخدم عربية
+*سيتم فتح المشروع في متصفحك على الرابط `http://localhost:3000`*
 
 ---
-*
+
+## ⚙️ إعدادات الذكاء الاصطناعي (Environment Variables)
+
+للتأكد من عمل التلخيص والاختبارات والمحادثة، يجب إضافة مفتاح الـ API الخاص بـ OpenRouter.
+
+قم بفتح ملف `backend/.env` وتأكد من وجود الإعدادات التالية:
+```env
+PORT=5000
+OPENROUTER_API_KEY=your_api_key_here
+AI_MODEL=openai/gpt-oss-20b:free
+```
+
+---
+
+## 📁 هيكل المشروع (Project Structure)
+
+```text
+SmartStudyAssistant/
+├── backend/                  # خادم الـ API
+│   ├── data/                 # قواعد البيانات المحلية (ملفات CSV)
+│   ├── src/
+│   │   ├── controllers/      # المنطق البرمجي (الاحصائيات، المحادثة، المحاضرات)
+│   │   ├── routes/           # مسارات الـ API
+│   │   └── services/         # خدمات الذكاء الاصطناعي وقراءة الملفات
+│   └── server.js             # نقطة انطلاق الخادم
+│
+├── frontend/                 # واجهة المستخدم
+│   ├── src/
+│   │   ├── components/       # المكونات (TopBar, ThemeToggler, ...)
+│   │   ├── pages/            # الصفحات (Dashboard, Study, Quiz, Upload)
+│   │   └── styles/           # ملفات التصميم (CSS)
+│
+├── push_to_github.bat        # أداة الرفع السريع إلى GitHub
+└── run_everything.bat        # أداة التشغيل السريع للمشروع كاملًا
+```
+
+---
+**تم تطوير المشروع بحب ❤️ لمساعدة الطلاب على الدراسة بذكاء أكبر، وليس بجهد أكبر!**
