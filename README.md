@@ -82,10 +82,9 @@ SmartStudyAssistant/
 
 ✅ تحميل ملفات PDF
 ✅ استخراج النصوص من الملفات
-✅ توليد ملخصات ذكية باستخدام Gemini AI
+✅ توليد ملخصات ذكية باستخدام OpenRouter AI
 ✅ إنشاء اختبارات تفاعلية
 ✅ واجهة مستخدم عربية
 
 ---
-**تم الإنشاء بـ ❤️**
->>>>>>> bc83603 (Initial commit for Smart Study Assistant)
+*
